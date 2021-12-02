@@ -1,0 +1,30 @@
+{
+  "name": "wie",
+  "version": "1.0.0",
+  "description": "WIE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowfallen/WIE.git"
+  },
+  "author": "Oleksandr B.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snowfallen/WIE/issues"
+  },
+  "homepage": "https://github.com/snowfallen/WIE#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify-es": "^3.0.0",
+    "sass": "^1.36.0"
+  }
+}
