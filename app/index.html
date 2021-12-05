@@ -1,16 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>WIE</title>
 </head>
+
 <body>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptatem dolore molestiae!
-            Ex eos repellat unde harum earum temporibus numquam saepe. Doloremque mollitia ullam expedita ipsam natus veniam commodi quasi.</h1>   
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil fuga voluptatibus dolores facere possimus illo, cum ex nostrum fugiat totam mollitia accusantium perferendis magnam dolor nesciunt, odio vero ut deserunt.</p>  
+    <div id="wrapper">
+        <header>
+            <div id="container-menu">
+                <menu>
+                    <li><a href="#wrapper" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </menu>
+            </div>
+            <div class="burger" @click="burgerAdd">
+                <div class="burger__line" ref="arrow"></div>
+                <div class="burger__line" ref="arrow1"></div>
+                <div class="burger__line" ref="arrow2"></div>
+            </div>
+            <div class="menu-burger" ref="burger">
+                <menu>
+                    <li>
+                        <a href="#wrapper" class="active" @click="burgerDel">Home</a>
+                    </li>
+                    <li><a href="#about" @click="burgerDel">About</a></li>
+                    <li><a href="#works" @click="burgerDel">Works</a></li>
+                    <li><a href="#contact" @click="burgerDel">contact</a></li>
+                    <div class="arrow" @click="burgerDel">
+                        <div class="arrow__line" id="arrow-left"></div>
+                        <div class="arrow__line" id="arrow-rigth"></div>
+                    </div>
+                </menu>
+            </div>
+        </header>
+        <main></main>
+        <footer></footer>
+    </div>
     <script src="js/main.min.js"></script>
 </body>
+
 </html>

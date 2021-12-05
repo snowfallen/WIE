@@ -1,0 +1,169 @@
+header {
+    position: fixed;
+    z-index: 11;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    background-color: rgb(17, 15, 15);
+}
+header #container-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+header #container-menu menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+header #container-menu menu li a {
+    font-size: calc(20px + 0.3125vw);
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    padding: 0 19px 0 19px;
+}
+header #container-menu menu li::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: #8643DC;
+    display: block;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+header #container-menu menu li:hover::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: #8643DC;
+    display: block;
+}
+header .burger {
+    display: none;
+    width: 25px;
+    height: 25px;
+    padding: 0 30px;
+    z-index: 100;
+}
+header .burger__line {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    width: 20px;
+    height: 2px;
+    background-color: #fcfcfc;
+    border-radius: 2%;
+    margin: 2.5px 0px;
+    -webkit-transform-origin: left top;
+        -ms-transform-origin: left top;
+            transform-origin: left top;
+}
+header .burger .burger__line:nth-child(2) {
+    -webkit-transform-origin: left bottom;
+        -ms-transform-origin: left bottom;
+            transform-origin: left bottom;
+}
+header .menu-burger {
+    height: 0;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #130e0e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+header .menu-burger.active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    height: 350px;
+    display: block;
+}
+header .menu-burger menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 350px;
+}
+header .menu-burger menu li a {
+    text-transform: uppercase;
+    color: #cccccc;
+    font-size: calc(14px + 0.1428571429vw);
+}
+header .menu-burger menu li a.active {
+    color: #E8603C;
+}
+header .menu-burger menu .arrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 35px;
+    height: 35px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+}
+header .menu-burger menu .arrow #arrow-left {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: rotateZ(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotateZ(45deg);
+    position: absolute;
+    left: 4px;
+}
+header .menu-burger menu .arrow #arrow-rigth {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: rotateZ(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotateZ(-45deg);
+    position: absolute;
+    left: 13px;
+}
+header .menu-burger menu .arrow .arrow__line {
+    width: 15px;
+    height: 2.5px;
+    background-color: #d6cecb;
+}
+header .menu-burger menu .arrow .arrow__line.active {
+    background-color: black;
+}
